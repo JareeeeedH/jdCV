@@ -1,0 +1,500 @@
+/* =========================================================
+   Jared Huang CV — CakeResume visual recreation
+   ========================================================= */
+
+:root {
+  --bg-page: #f8f8f8;
+  --bg-card: #ffffff;
+  --bg-skills: #9ab0a7;
+  --text: #555555;
+  --text-dark: #333333;
+  --text-black: #000000;
+  --accent: #2e406f;
+  --shadow: rgba(26, 31, 28, 0.08) 0px 2px 6px 0px;
+  --resume-width: 992px;
+  --pad-x: 56px;
+  --pad-y: 50px;
+  --gutter: 20px;
+  --font-body: "Alata", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+    sans-serif;
+  --font-heading: "Archivo", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+    sans-serif;
+  --font-meta: "Source Sans 3", "Source Sans Pro", "Noto Sans TC",
+    "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16.7px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- Page / Card ---------- */
+
+.page {
+  min-height: 100vh;
+  padding: 40px 16px 80px;
+}
+
+.resume {
+  width: 100%;
+  max-width: var(--resume-width);
+  margin: 0 auto;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Shared section ---------- */
+
+.section {
+  padding: 25px var(--pad-x);
+}
+
+.section-profile {
+  padding-top: var(--pad-y);
+  padding-bottom: 25px;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--accent);
+}
+
+.section-title--dark {
+  color: var(--text-dark);
+}
+
+.section-title--on-accent {
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.section-title--sub {
+  margin-top: 28px;
+  font-size: 23px;
+  line-height: 1.15;
+}
+
+/* ---------- Profile ---------- */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--gutter);
+  align-items: start;
+}
+
+.profile-photo {
+  width: 201px;
+  height: auto;
+  aspect-ratio: 648 / 768;
+  object-fit: cover;
+  margin: 8px 0;
+}
+
+.profile-meta {
+  margin: 12px 0 4px;
+  font-family: var(--font-meta);
+  font-size: 16.7px;
+  line-height: 1.15;
+  color: var(--text-dark);
+}
+
+.profile-email {
+  margin: 6px 0 0;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.profile-email a {
+  color: var(--accent);
+}
+
+.greeting {
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+  font-size: 18.37px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.bio {
+  margin: 0 0 12px;
+  font-size: 18.37px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: pre-line;
+}
+
+.bio:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Skills ---------- */
+
+.section-skills {
+  background: var(--bg-skills);
+  padding: 25px var(--pad-x);
+}
+
+.section-skills .section-title {
+  color: var(--accent);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gutter);
+}
+
+.skill-col--featured {
+  position: relative;
+  padding: 12px 14px;
+  margin: -12px -4px -12px -14px;
+  background: rgba(46, 64, 111, 0.18);
+  border-left: 3px solid #2e406f;
+}
+
+.skill-col--featured .skill-heading {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.skill-col--featured .skill-divider {
+  border-top-color: rgba(255, 255, 255, 0.95);
+  border-top-width: 1.5px;
+}
+
+.skill-heading {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 18.37px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.skill-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  margin: 10px 0 12px;
+}
+
+.skill-list {
+  margin: 0;
+  padding-left: 1.25em;
+  color: #ffffff;
+  font-size: 16.7px;
+  line-height: 1.5;
+}
+
+.skill-list li {
+  margin-bottom: 2px;
+}
+
+.skill-list li::marker {
+  color: #ffffff;
+}
+
+/* ---------- Portfolio ---------- */
+
+.section-portfolio {
+  padding-top: 28px;
+  padding-bottom: 10px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--gutter);
+  margin: 28px 0 36px;
+  align-items: start;
+}
+
+.project--wide-body {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+}
+
+.project-media img {
+  width: 100%;
+  max-width: 419px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.project-media--portrait img {
+  max-width: 273px;
+}
+
+.project-media--phones img {
+  width: 100%;
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+.project-media--etool img {
+  max-width: 415px;
+}
+
+.project-title {
+  margin: 0 0 8px;
+  font-family: var(--font-body);
+  font-size: 18.37px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+.project-links {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-links a {
+  margin-right: 10px;
+  color: var(--accent);
+}
+
+.project-category,
+.project-desc,
+.project-stack {
+  margin: 0 0 8px;
+  font-size: 16.7px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.project-tech-list,
+.project-bullet-list {
+  margin: 4px 0 12px;
+  padding-left: 1.25em;
+  font-size: 16.7px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.project-bullet-list {
+  list-style-type: disc;
+}
+
+.project-bullet-list li {
+  margin-bottom: 6px;
+}
+
+/* ---------- Career (Work + Edu) ---------- */
+
+.section-career {
+  padding-top: 20px;
+  padding-bottom: 56px;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--gutter);
+  align-items: start;
+}
+
+.job {
+  margin-bottom: 2px;
+}
+
+.job-company,
+.edu-school {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  font-size: 18.37px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-black);
+}
+
+.job-date,
+.edu-date {
+  font-size: 16.7px;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.job-role {
+  margin: 6px 0 0;
+  font-family: var(--font-heading);
+  font-size: 18.37px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--accent);
+}
+
+.job-sep {
+  margin: 12px 0;
+  color: var(--text-dark);
+  font-size: 16.7px;
+  line-height: 1;
+}
+
+.lang-item,
+.other-item {
+  margin: 0 0 8px;
+  font-size: 16.7px;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+.edu-school {
+  font-size: 16.7px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 991px) {
+  :root {
+    --pad-x: 36px;
+    --pad-y: 36px;
+  }
+
+  .page {
+    padding: 24px 12px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 24px;
+    --pad-y: 28px;
+    --gutter: 16px;
+  }
+
+  .page {
+    padding: 0 0 40px;
+  }
+
+  .resume {
+    box-shadow: none;
+  }
+
+  .profile-grid,
+  .skills-grid,
+  .project,
+  .project--wide-body,
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-col--featured {
+    margin: 0;
+    padding: 12px 14px;
+  }
+
+  .profile-photo {
+    width: 160px;
+  }
+
+  .profile-left {
+    text-align: left;
+  }
+
+  .project-media img,
+  .project-media--portrait img,
+  .project-media--etool img,
+  .project-media--phones img {
+    max-width: 100%;
+  }
+
+  .section-title--sub {
+    font-size: 20px;
+  }
+
+  .greeting,
+  .bio {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --pad-x: 18px;
+  }
+
+  .profile-photo {
+    width: 140px;
+  }
+
+  .skill-heading {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  .resume {
+    box-shadow: none;
+    max-width: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

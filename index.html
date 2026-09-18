@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jared Huang | Frontend / Product / Web3</title>
+  <meta name="description" content="Jared Huang — frontend-focused developer with cross-functional business experience and growing interest in Web3 technologies." />
+  <meta name="author" content="Jared Huang" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jared Huang | Frontend / Product / Web3" />
+  <meta property="og:description" content="Jared Huang — frontend-focused developer with cross-functional business experience and growing interest in Web3 technologies." />
+  <meta property="og:image" content="assets/profile/jared.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Jared Huang | Frontend / Product / Web3" />
+  <meta name="twitter:description" content="Jared Huang — frontend-focused developer with cross-functional business experience and growing interest in Web3 technologies." />
+  <meta name="twitter:image" content="assets/profile/jared.png" />
+
+  <link rel="icon" href="assets/profile/jared.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Archivo:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <main id="main" class="resume" aria-label="Jared Huang Resume">
+      <!-- Profile -->
+      <section class="section section-profile" aria-labelledby="intro-heading">
+        <div class="profile-grid">
+          <div class="profile-left">
+            <img
+              class="profile-photo"
+              src="assets/profile/jared.png"
+              alt="Jared Huang portrait"
+              width="201"
+              height="238"
+            />
+            <p class="profile-meta">1992/03/07, Kaohsiung City.</p>
+            <h4 class="profile-email">
+              <a href="mailto:jared03050@gmail.com">jared03050@gmail.com</a>
+            </h4>
+          </div>
+          <div class="profile-right">
+            <h1 id="intro-heading" class="greeting">Hi There, I'm Jared</h1>
+            <p class="bio">I have experience in both software development and business, with a cross-functional background that allows me to understand product requirements from both business and technical perspectives.</p>
+            <p class="bio">My primary technical focus is frontend development, with experience in Vue.js, JavaScript, TypeScript, and HTML/CSS. I also have experience working with product requirements, analyzing problems, and turning ideas into practical web applications.</p>
+            <p class="bio">While my hands-on experience with Web3 technologies is still developing, I’m highly interested in the field and eager to learn new technologies and concepts. I enjoy exploring unfamiliar areas, learning through hands-on projects, and continuously expanding my technical capabilities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section section-skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="section-title section-title--on-accent">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-col">
+            <h3 class="skill-heading">Frontend</h3>
+            <hr class="skill-divider" />
+            <ul class="skill-list">
+              <li>HTML + CSS + JavaScript</li>
+              <li>RWD</li>
+              <li>Vue.js</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h3 class="skill-heading">Blockchain</h3>
+            <hr class="skill-divider" />
+            <ul class="skill-list">
+              <li>solidity</li>
+              <li>web3.js串接功能</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h3 class="skill-heading">Other</h3>
+            <hr class="skill-divider" />
+            <ul class="skill-list">
+              <li>git版本控制</li>
+              <li>Web App</li>
+              <li>AI-assisted development（Cursor）</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="section section-portfolio" aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading" class="section-title section-title--dark">Portfolio</h2>
+
+        <!-- 派單 接單管理系統 (first for delivery narrative) -->
+        <article class="project">
+          <div class="project-media project-media--phones">
+            <img
+              src="assets/projects/squidflow-1.png"
+              alt="Dispatch system — status overview screen"
+              width="340"
+              height="410"
+              loading="lazy"
+            />
+            <img
+              src="assets/projects/squidflow-2.png"
+              alt="Dispatch system — driver status panel"
+              width="356"
+              height="391"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Dispatch &amp; Order Acceptance Management System</h3>
+            <p class="project-desc">Connects admin dispatch and driver order-acceptance workflows, centrally managing orders, drivers, and trip status.</p>
+            <p class="project-category">Product / Technical PM / Full-stack Development</p>
+            <p class="project-links">
+              <a href="https://squid-flow.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a href="https://github.com/JareeeeedH/SquidFlow" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+            <p class="project-desc">Built an end-to-end dispatch and order-acceptance management system — from requirements analysis and product specs to system architecture, development, and deployment.</p>
+            <ul class="project-bullet-list">
+              <li>Designed Admin / Driver dual roles and a complete Order Lifecycle</li>
+              <li>Designed a multi-driver order-grabbing mechanism, ensuring via Backend + Database that each order can be successfully accepted by only one driver</li>
+              <li>Built Driver GPS, Pickup Geocoding, distance calculation, and Google Maps integration</li>
+              <li>Implemented Web Push, Session Authentication, RBAC, Rate Limiting, and Security Baseline</li>
+              <li>Developed with a Spec → Implementation → Test → Audit workflow, using an AI Coding Agent to support development and Code Review</li>
+            </ul>
+            <p class="project-stack">Vue 3 / TypeScript / NestJS / PostgreSQL</p>
+          </div>
+        </article>
+
+        <!-- WhiskyHello -->
+        <article class="project">
+          <div class="project-media">
+            <img
+              src="assets/projects/whiskyhello-1.png"
+              alt="WhiskyHello website screenshot — whisky review community home"
+              width="419"
+              height="196"
+              loading="lazy"
+            />
+            <img
+              src="assets/projects/whiskyhello-2.png"
+              alt="WhiskyHello website screenshot — whisky review detail"
+              width="419"
+              height="193"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Whisky Review Community｜WhiskyHello</h3>
+            <p class="project-links">
+              <a href="https://whisky-hello.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a href="https://github.com/JareeeeedH/whiskyHello" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+            <p class="project-category">Product / Technical PM / Full-stack Development</p>
+            <p class="project-desc">Planned and implemented</p>
+            <p class="project-desc">Whisky and review search, member JWT authentication, review CRUD, deployed to Vercel + Railway + MongoDB Atlas.</p>
+            <p class="project-stack">Frontend：Vue 3 / Vite / TypeScript</p>
+            <p class="project-stack">Backend：Node.js / Express / MongoDB / JWT</p>
+            <p class="project-stack">AI：Backend AI Service / LLM API</p>
+          </div>
+        </article>
+
+        <!-- 傑瑞夜旅 -->
+        <article class="project">
+          <div class="project-media project-media--portrait">
+            <img
+              src="assets/projects/jr-vntravel.png"
+              alt="Jerry Night Travel brand website screenshot"
+              width="273"
+              height="377"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Jerry Night Travel</h3>
+            <p class="project-links">
+              <a href="https://jr-vntravel.com/" target="_blank" rel="noopener noreferrer">Website</a>
+            </p>
+            <p class="project-desc">1. Built an SEO-focused travel brand website</p>
+            <p class="project-desc">2. Prioritized SEO while also aligning with Google Ads policies, successfully passing review and launching on Google Search Ads.</p>
+            <p class="project-desc">Tech stack:</p>
+            <ul class="project-tech-list">
+              <li>Cursor / Astro / Tailwind</li>
+              <li>GitHub + Vercel CI/CD auto-deployment</li>
+              <li>GoDaddy for the production domain</li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Work + Education -->
+      <section class="section section-career" aria-label="Work experience and education">
+        <div class="career-grid">
+          <div class="career-col">
+            <h2 class="section-title" id="work-heading">Work Experience</h2>
+            <div class="job">
+              <h3 class="job-company">Zhongyou Information Co., Ltd. <span class="job-date">(2021/09 - 2024/04)</span></h3>
+              <p class="job-role">Frontend Engineer: Website frontend maintenance and feature development</p>
+            </div>
+            <div class="job-sep" aria-hidden="true">-</div>
+            <div class="job">
+              <h3 class="job-company">Muco Biotech Pharmaceutical Co., Ltd. <span class="job-date">(2020/06 - 2021/08)</span></h3>
+              <p class="job-role">Sales Specialist: Pharmaceutical product promotion and sales</p>
+            </div>
+            <div class="job-sep" aria-hidden="true">-</div>
+            <div class="job">
+              <h3 class="job-company">Taishin Daan Leasing Co., Ltd. <span class="job-date">(2018/06 - 2020/06)</span></h3>
+              <p class="job-role">Sales Specialist: Corporate finance credit client development</p>
+            </div>
+            <div class="job-sep" aria-hidden="true">-</div>
+            <div class="job">
+              <h3 class="job-company">Walsin Lihwa Corporation <span class="job-date">(2015/06 - 2017/12)</span></h3>
+              <p class="job-role">International Sales Representative: Overseas client relations and import/export trade</p>
+            </div>
+          </div>
+
+          <div class="career-col">
+            <h2 class="section-title" id="edu-heading">Education</h2>
+            <div class="edu">
+              <h3 class="edu-school">Cheng Shiu University — Department of International Business <span class="edu-date">(2010 - 2014)</span></h3>
+            </div>
+
+            <h2 class="section-title section-title--sub" id="lang-heading">Languages</h2>
+            <p class="lang-item">English: Intermediate (TOEIC: 705)</p>
+
+            <h2 class="section-title section-title--sub" id="other-heading">Other Experience</h2>
+            <p class="other-item">1. Overseas business trip experience: India, Suzhou, Shanghai.</p>
+            <p class="other-item">2. Attended an English Academy in the Philippines for six months.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
